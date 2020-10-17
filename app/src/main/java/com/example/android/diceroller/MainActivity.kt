@@ -17,6 +17,7 @@
 package com.example.android.diceroller
 
 import android.os.Bundle
+import android.os.SystemClock
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
@@ -52,8 +53,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun rollDice() {
         //Random function to pick a side of the dice to show
-        val randomInt = Random().nextInt(6) + 1
-        val drawableResource = when (randomInt) {
+        //val randomInt = Random().nextInt(6) + 1
+        var sleeper = 0
+        //fail attempt to change the random
+        for ( i in 1..6){
+            SystemClock.sleep(2000)
+            sleeper=i
+        }
+        //Change randomInt for sleeper
+        val drawableResource = when (sleeper) {
             1 -> R.drawable.img1
             2 -> R.drawable.img2
             3 -> R.drawable.img3
