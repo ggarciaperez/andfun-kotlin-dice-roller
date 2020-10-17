@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--For Spanish speaking device settings-->
+    <string name="app_name">Los 6 magnificos</string>
+    <string name="roll">Fantasia</string>
+    <string name="rollCounter">Pura Magia</string>
+</resources>
