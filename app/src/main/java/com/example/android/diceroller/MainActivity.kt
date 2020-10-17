@@ -19,26 +19,39 @@ package com.example.android.diceroller
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import org.w3c.dom.Text
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-
+    //A container for the Images is declared
     lateinit var diceImage: ImageView
+
+    //Added a clickCount variable
+    var clickCount = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //Sets the working layout
         setContentView(R.layout.activity_main)
 
+        //Added a variable to acces the Textview I added to the layout
+        val rollCount: TextView = findViewById(R.id.rollCounter)
         val rollButton: Button = findViewById(R.id.roll_button)
+        //Listener for the button, reacts on click
         rollButton.setOnClickListener {
+            clickCount++
             rollDice()
+            //This will add a roll counter on screen
+            rollCount.text= clickCount.toString()
         }
-
+        rollCount.text= clickCount.toString()
         diceImage = findViewById(R.id.dice_image)
     }
 
     private fun rollDice() {
+        //Random function to pick a side of the dice to show
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
             1 -> R.drawable.dice_1
@@ -48,7 +61,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-
+        //Displays the image
         diceImage.setImageResource(drawableResource)
     }
 }

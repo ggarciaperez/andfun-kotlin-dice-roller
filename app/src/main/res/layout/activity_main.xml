@@ -37,4 +37,13 @@
         android:layout_gravity="center_horizontal"
         android:text="@string/roll" />
 
+    <!--New adition to the app a text view that will count the rolls-->
+    <TextView
+        android:id="@+id/rollCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/rollCounter"
+        tools:text="@string/rollCounter" />
+
 </LinearLayout>

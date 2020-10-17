@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Dice Roller</string>
-    <string name="roll">Lanzar</string>
-    <string name="tirar">Tirando</string>
-    <string name="otro">Otro</string>
+    <!--Change button text back to english-->
+    <string name="roll">Roll</string>
+    <!--Added a new TextView, gave it a name/id and a value-->
+    <string name="rollCounter">0</string>
 </resources>
