@@ -54,12 +54,12 @@ class MainActivity : AppCompatActivity() {
         //Random function to pick a side of the dice to show
         val randomInt = Random().nextInt(6) + 1
         val drawableResource = when (randomInt) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+            1 -> R.drawable.img1
+            2 -> R.drawable.img2
+            3 -> R.drawable.img3
+            4 -> R.drawable.img4
+            5 -> R.drawable.img5
+            else -> R.drawable.img6
         }
         //Displays the image
         diceImage.setImageResource(drawableResource)
